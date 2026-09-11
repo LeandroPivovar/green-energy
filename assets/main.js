@@ -26,7 +26,8 @@
     el.hidden = !waNumber;
   });
   if (!waNumber) {
-    console.warn("[Green Energy] WhatsApp não configurado: preencha whatsapp.number em assets/config.js");
+    document.querySelector("[data-quote-submit]").textContent = "Preparar meu pedido de orçamento";
+    document.querySelector(".form-hint").textContent = "Prepare sua mensagem e envie pelo nosso Instagram.";
   }
 
   /* Menu mobile */
@@ -143,12 +144,12 @@
 
     if (waNumber) {
       status.hidden = true;
-      const opened = window.open(waUrl(text), "_blank", "noopener");
-      if (!opened) window.location.href = waUrl(text);
+      window.location.href = waUrl(text);
       return;
     }
 
     status.querySelector("[data-message]").textContent = text;
+    copyButton.textContent = "Copiar mensagem";
     status.hidden = false;
     status.focus();
   });

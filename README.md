@@ -2,6 +2,12 @@
 
 Página estática (HTML, CSS e JavaScript sem dependências) para a Green Energy, empresa de energia solar em Dourados e região (MS).
 
+## Direção visual
+
+Abertura em amarelo solar e verde profundo, tipografia ampla e fotografia com recorte diagonal.
+Galeria assimétrica, comparação de economia e etapas numeradas mantêm o conteúdo original em uma composição responsiva.
+Animações respeitam a preferência de movimento reduzido do navegador.
+
 ## Estrutura
 
 - `index.html` — conteúdo e SEO básico.
@@ -20,7 +26,8 @@ npx http-server . -p 5173 -c-1
 
 1. **WhatsApp**: preencher `whatsapp.number` em `assets/config.js` (DDI + DDD + número, só dígitos).
    O link do Instagram (`wa.me/message/...`) não aceita mensagem pré-preenchida e não ficou legível no print.
-   Enquanto o número estiver vazio, o formulário mostra a mensagem pronta e indica o Instagram.
+   Enquanto o número estiver vazio, o formulário informa que o contato será pelo Instagram e permite preparar e copiar a mensagem.
+   Com o número preenchido, o formulário abre o WhatsApp com o pedido; o envio é confirmado pelo visitante no WhatsApp.
 2. **Endereço**: o print mostra "Rua Elsei Fujinaka, 1770 - Jardim dos Cristhais". Os diretórios de CEP
    registram "Rua Eisei Fujinaka", bairro "Jardim Cristhais". Confirmar com a empresa (`assets/config.js`,
    JSON-LD no `<head>` e rodapé).
